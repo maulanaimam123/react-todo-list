@@ -1,5 +1,7 @@
 import React from "react";
 import './ComponentStyle.css';
+import { Button } from 'reactstrap';
+
 
 export const TODO_ACTIONS = {
   ADD_TODO: "add-todo",
@@ -56,6 +58,11 @@ const Todo = ({ todo, dispatch }) => {
       >
         Delete
       </button>
+      <Button color="success"
+              onClick={() =>
+                dispatch({ type: TODO_ACTIONS.TOGGLE_TODO, id: todo.id })
+              }>
+        Hello</Button>
     </div>
   );
 };
