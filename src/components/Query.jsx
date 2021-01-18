@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ComponentStyle.css';
 import { TODO_ACTIONS } from './Todo';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';

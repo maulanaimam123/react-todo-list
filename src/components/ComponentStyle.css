@@ -1,73 +1,27 @@
-.todo-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: 3px solid white;
-  background: transparent;
-  padding: 5px;
-  margin: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  outline: none;
+.app-title {
+  font-size: 2rem;
 }
-.plus-icon {
-  width: 100%;
+.card-container {
+  font-size: medium;
+  font-weight: 600;
+  text-align: left;
 }
-.todo-input {
-  border: 3px solid white;
-  background-color: transparent;
-  padding: 6px 30px;
-  border-radius: 15px;
-  color: white;
-  font-size: 1.2rem;
-  outline: none;
-  text-align: center;
-  transition: all 0.3s ease;
+.todo-done {
+  color: grey;
+  text-decoration: line-through;
+  background-color: rgb(102, 219, 232);
+  margin: 2vh 0;
+  padding: 2vh 15px;
+  transition: all 300 ease;
 }
-.todo-select {
-  cursor: pointer;
-  text-align: center;
-  background-color: transparent;
-  border: 3px solid white;
-  padding: 8px;
-  border-radius: 20px;
-  color: white;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-.todo-input:focus, .todo-input:hover, .todo-button:hover, .todo-select:hover, .todo-select:focus {
-  border: 3px solid #b0d2ff;
-}
-.todo-select option {
+.todo-notyet {
   color: black;
+  background-color: rgb(60, 181, 76);
+  margin: 2vh 0;
+  padding: 2vh 15px;
 }
-.todo-item {
-  color: white;
-}
-.todo-card {
-  background-color: white;
-  border: 2px solid white;
-  width: 45vw;
-  height: 3rem;
-  border-radius: 15px;
-  font-weight: 600;
-}
-.toggle-button, .delete-button {
-  background-color: #61DBFB;
-  color: #282c34 ;
-  height: auto;
-  border: 1px solid white;
-  margin: 5px;
-  padding: 1vh 2vw;
-  border-radius: 10px;
-  align-items: flex-end;
-  outline: none;
-  cursor: pointer;
-  font-size: 0.8em;
-  font-weight: 600;
-}
-.fluid-input {
-  width: 100%;
+.todo-nothing {
+  font-style: italic;
+  color: rgb(184, 173, 173);
+  font-size: 1.2rem;
 }
