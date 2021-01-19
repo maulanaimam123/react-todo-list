@@ -21,10 +21,19 @@ export default function TodoBoard({ todos, setTodos }) {
               destination: result.destination.index
             })
   }
+  const getDest = foundIndex => foundIndex > 0 ? foundIndex - 1 : todos.length - 1
+  const handleDoubleClick = e => {
+    // Toggle todo isCompleted
+    setTodos({type: TODO_ACTIONS.TOGGLE_TODO, id: e.target.id})
 
-  const handleDoubleClick = (e) => {
-    const todoId = e.target.id
-    setTodos({type: TODO_ACTIONS.TOGGLE_TODO, id: todoId})
+    // Rearrange todo
+    const source = todos.findIndex(el => el.id === e.target.id)
+    const dest = todos[source].isCompleted? // Somehow the state is not directly changed
+                 todos.findIndex((el, index) => el.isCompleted === todos[source].isCompleted) :
+                 getDest(todos.findIndex((el, index) => 
+                                            el.isCompleted !== todos[source].isCompleted
+                                            && source !== index))
+    setTodos({type: TODO_ACTIONS.REARRANGE_TODO, source: source, destination: dest})
   }
 
   if (todos.length){
